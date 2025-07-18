@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'sam_tracker = sam2_tracker.sam2_tracker:main',
+            'sam2_tracker = sam2_tracker.sam2_tracker:main',
             'polygon_to_array = sam2_tracker.polygon_to_array:main',
         ],
     },
