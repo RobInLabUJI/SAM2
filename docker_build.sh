@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-docker build -t sam2 .
+docker build -t ghcr.io/robinlabuji/sam2:latest .
 
