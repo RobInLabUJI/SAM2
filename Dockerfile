@@ -36,11 +36,11 @@ RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3
 
 WORKDIR /home/user
 
-RUN git clone https://github.com/facebookresearch/segment-anything-2 && \
+RUN git clone https://github.com/facebookresearch/segment-anything-2 --single-branch && \
     cd segment-anything-2 && \
-    python3 -m pip install -e . -v && \
-    python3 -m pip install -e ".[demo]" && \
-    cd checkpoints && ./download_ckpts.sh && cd ..
+    python3 -m pip install -e . -v
+    
+RUN  cd segment-anything-2/checkpoints && ./download_ckpts.sh && cd ..
 
 RUN apt-get update \
 	&& apt-get install -y python3-opencv python3-matplotlib python3-notebook \
