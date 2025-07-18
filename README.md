@@ -9,19 +9,25 @@ Docker image with SAM2 and ROS2 Humble.
 * OSRF Rocker
 
 ## Docker Image
-Clone this repository:
+1. Clone this repository:
 ```
 git clone https://github.com/RobInLabUJI/SAM2.git
 ```
-Build the Docker image:
-```
-cd SAM2 && ./docker_build.sh
-```
-Run a Docker container:
+2. Create the Docker image:
+   
+    2.1 Either by building it:
+    ```
+    cd SAM2 && ./docker_build.sh
+    ```
+    2.2 Or pulling it from GitHub:
+    ```
+    cd SAM2 && ./docker_pull.sh
+    ```  
+3. Run a Docker container:
 ```
 cd SAM2 && ./docker_run.sh
 ```
-Open an additional terminal in the container:
+4. In a new terminal you can open an additional session in the container:
 ```
 cd SAM2 && ./bash.sh
 ```
